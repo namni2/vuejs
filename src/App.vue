@@ -13,5 +13,3 @@ let app =  {
 export default app
 </script>
 
-<style>
-</style>

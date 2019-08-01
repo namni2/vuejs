@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "popper.js": "^1.15.0",
     "vue": "^2.5.11",
+    "vue-daum-map": "^1.0.14",
     "vue-http-server": "0.0.1",
+    "vue-naver-maps": "^0.11.6",
     "vue-router": "^3.0.7"
   },
   "browserslist": [
@@ -25,9 +28,16 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.26",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "expose-loader": "^0.7.5",
     "file-loader": "^1.1.4",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

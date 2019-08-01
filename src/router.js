@@ -1,22 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from './component/HelloWorld'
 import Main from './component/Main'
+import myLocation from './template/myLocation'
+import bodyHtml from './template/body'
 
 Vue.use(Router)
  
  export default new Router({
+    mode:'history',
     routes: [
       {
-        path: '/',
-        name: 'HelloWorld',
-        component: HelloWorld
-      },
-      {
-          path:'/main',
+          path:'/',
           name:'main',
-          component:Main
-
+          component:Main,
+          children:[
+            {
+              path:'/main',
+              name:'body',
+              component:bodyHtml
+            },{
+              path:'/location',
+              name:'subMenuLocation',
+              component:myLocation
+            }
+        ]
       }
     ]
   })

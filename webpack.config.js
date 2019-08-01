@@ -14,9 +14,19 @@ module.exports = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
+          'style-loader',
           'css-loader'
         ],
-      },      {
+      },   
+      {
+        test: /\.s[a|c]ss$/,
+        use: [
+          'sass-loader',
+          'style-loader',
+          'css-loader'
+        ],
+      }, 
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -31,7 +41,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|eot|woff|woff2|ttf)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
@@ -64,6 +74,12 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {
         NODE_ENV: '"production"'
       }
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery',
+      jQuery: 'jquery'
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
