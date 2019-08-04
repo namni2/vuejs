@@ -16,7 +16,8 @@
     "vue-daum-map": "^1.0.14",
     "vue-http-server": "0.0.1",
     "vue-naver-maps": "^0.11.6",
-    "vue-router": "^3.0.7"
+    "vue-router": "^3.0.7",
+    "vuex": "^3.1.1"
   },
   "browserslist": [
     "> 1%",

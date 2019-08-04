@@ -1,38 +1,25 @@
 <template>
  <div class="container">
-
-      <div class="page-header" id="banner">
+     <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
-            <h1>왜야아아</h1>
-            <p class="lead">Flatly in night mode</p>
+            <h1>주요도시 </h1>
+            <p class="lead">지역을 선택해주세요</p>
           </div>
         </div>
       </div>
-
-
-        <select @change="search($event)" class="custom-select">
-            <option value="">--지역--</option>
-            <option value="seoul">서울</option>
-            <option value="incheon">인천</option>
-            <option value="daegu">대구</option>
-            <option value="daejeon">대전</option>
-        </select>
-
-        <div v-if="seen">
-            <div><span class="text-warning">현재온도 </span>: {{post.main.temp - 273.15}}</div>
-            <div>현재습도 : {{post.main.humidity}}</div>
-            <div>날씨 : {{post.weather[0].main}}</div>
-            <div>상세날씨설명 : {{post.weather[0].description}}</div>
-            <div>날씨 이미지 : {{post.weather[0].icon}}</div>
-            <div>바람 : {{post.wind.speed}}</div>
-            <div>나라 : {{post.sys.country}}</div>
-        </div> 
+      <select @change="search($event)" class="custom-select">
+          <option value="">--지역--</option>
+          <option value="seoul">서울</option>
+          <option value="incheon">인천</option>
+          <option value="daegu">대구</option>
+          <option value="daejeon">대전</option>
+      </select>
+      <info :weather-info="post" :seen="seen"></info>
     </div>
- 
 </template>
-
 <script>
+import info from './info';
 
 export default {
   name: 'bodyHtml'
@@ -50,7 +37,6 @@ export default {
               this.seen=false; 
               return;
           }
-         
           const url = 'https://api.openweathermap.org/data/2.5/weather?unit=metric&q='+location+'&appid=a9a915167d70372959600a838dcc192e'
        
           this.$http.get(url)
@@ -59,6 +45,9 @@ export default {
             this.seen = true;
           })
       }
+  }
+  ,components:{
+    info
   }
 }
 </script>
