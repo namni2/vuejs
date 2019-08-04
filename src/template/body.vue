@@ -16,7 +16,7 @@
             <option value="seoul">서울</option>
             <option value="incheon">인천</option>
             <option value="daegu">대구</option>
-            <option value="daejeon">대구</option>
+            <option value="daejeon">대전</option>
         </select>
 
         <div v-if="seen">
@@ -51,13 +51,12 @@ export default {
               return;
           }
          
-          const url = 'http://api.openweathermap.org/data/2.5/weather?unit=metric&q='+location+'&appid=a9a915167d70372959600a838dcc192e'
+          const url = 'https://api.openweathermap.org/data/2.5/weather?unit=metric&q='+location+'&appid=a9a915167d70372959600a838dcc192e'
        
           this.$http.get(url)
           .then((result)=>{
             this.post = result.data;
             this.seen = true;
-            console.log(this.post)
           })
       }
   }

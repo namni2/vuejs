@@ -7,7 +7,6 @@
 
 <script>
 import headerHtml from '../template/header'
-import weatherjs from '../assets/js/weather'
 
 export default {
   name: 'main',

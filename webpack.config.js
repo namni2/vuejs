@@ -49,6 +49,7 @@ module.exports = {
       }
     ]
   },
+ 
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
@@ -58,7 +59,11 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    overlay: true
+    disableHostCheck: true,
+    overlay: true,
+    https: true,
+    host:'weather.namni.com',
+    port:8080
   },
   performance: {
     hints: false

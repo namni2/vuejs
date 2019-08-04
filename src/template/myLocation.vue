@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
             <h1>my Location</h1>
-            <p class="lead">내 위치에서 찾아보기 !</p>
+            <p class="lead"> <a href="#" @click="current">현재위치 확인하기</a></p>
           </div>
         </div>
       </div>
@@ -12,21 +12,28 @@
 <div id="map" style="width:500px;height:400px;"></div>
 </div>
 </template>
-
 <script>
- /*   $.getScript('http://dapi.kakao.com/v2/maps/sdk.js?appkey=25aa7599488289b0dab2f101d00b97e0&libraries=services')
+import map from '../assets/js/callMap';
+map.init();
 
-  console.log(window.daum)
-   var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center : new daum.maps.LatLng(36.633535, 127.425882), // 지도의 중심좌표
-        level : 4
-    // 지도의 확대 레벨
-    };
-  
-  var map = new kakao.maps.Map(container, options);*/
 export default {
   name: 'myLocation'
+  ,methods:{
+    current:function(){
+      map.current( this.callWeather );
+     ;
+      event.preventDefault();
+    },
+    callWeather:function(pos){
+      console.log(pos)
+      var url= 'https://api.openweathermap.org/data/2.5/weather?lat='+ pos.lat +'&lon='+ pos.lon+'&appid=a9a915167d70372959600a838dcc192e';
+
+      this.$http.get(url)
+        .then((result)=>{
+          console.log(result)
+        })
+    }
+  }
 }
 </script>
 

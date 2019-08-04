@@ -10,6 +10,9 @@
             <li class="nav-item">
             <a class="nav-link" href="main">주요도시</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://weather.namni.com:8080/location">현재위치</a>
+            </li>
           </ul>
         </div>
 </nav>
