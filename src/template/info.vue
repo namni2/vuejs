@@ -7,9 +7,14 @@
         <div>날씨 이미지 : {{weatherInfo.weather[0].icon}}</div>
         <div>바람 : {{weatherInfo.wind.speed}}</div>
         <div>나라 : {{weatherInfo.sys.country}}</div> 
+
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
     </div> 
 </template>
 <script>
+import chart from '../assets/js/graph';
+
 export default {
     name:'info',
     data: function(){
@@ -17,5 +22,11 @@ export default {
         }
     }
     ,props:['weatherInfo','seen']
+    ,created:function(){
+        
+    }
+    ,mounted:function(){
+        chart.render();
+    }
 }
 </script>
