@@ -8,10 +8,10 @@
         <div class="navbar-collapse collapse" id="navbarResponsive" style="">
           <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" href="main">주요도시</a>
+            <a class="nav-link" href="major">주요도시</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="https://weather.namni.com:8080/location">현재위치</a>
+            <a class="nav-link" href="current">현재위치</a>
             </li>
           </ul>
         </div>

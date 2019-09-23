@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 let app =  {
   name: 'app'
 }

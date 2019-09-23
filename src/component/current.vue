@@ -10,7 +10,7 @@
       </div>
 <div id="map" style="width:500px;height:400px;"></div>
 
- <info :weather-info="post" :seen="seen"></info>
+<info :weather-info="post" :seen="seen"></info>
 
 </div>
 
@@ -21,7 +21,7 @@ import map from '../assets/js/callMap';
 map.init();
 
 export default {
-  name: 'myLocation'
+  name: 'current'
   ,data:function(){
     return {
       post:{}

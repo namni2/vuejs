@@ -15,40 +15,29 @@
           <option value="daegu">대구</option>
           <option value="daejeon">대전</option>
       </select>
-      <info :weather-info="post" :seen="seen"></info>
     </div>
 </template>
 <script>
-import info from './info';
+import { mapActions } from 'vuex'
 
 export default {
-  name: 'bodyHtml'
+  name: 'major'
   ,data:function(){
       return {
-          post:{}
-          ,seen:false
-          ,selected:''
       }
   }
   ,methods:{
-      search:function(e){
-          const location = e.target.value;
-          if(location === '') {
-              this.seen=false; 
-              return;
-          }
-          const url = 'https://api.openweathermap.org/data/2.5/weather?unit=metric&q='+location+'&appid=a9a915167d70372959600a838dcc192e'
-       
-          this.$http.get(url)
-          .then((result)=>{
-            this.post = result.data;
-            this.seen = true;
-          })
-      }
+    search : function (event){
+       var location = event.target.value;
+       this.$store.commit('setLocation', {'location':location});
+       if(location)
+         this.callTodayInfo();
+    },
+    ...mapActions([
+      'callTodayInfo'
+    ])
   }
-  ,components:{
-    info
-  }
+  
 }
 </script>
 

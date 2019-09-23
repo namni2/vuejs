@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from './component/Main'
-import myLocation from './template/myLocation'
-import bodyHtml from './template/body'
+import Main from './template/Main'
+
+import current from './component/current' 
+import major from './component/major'
 
 Vue.use(Router)
  
@@ -15,13 +16,13 @@ Vue.use(Router)
           component:Main,
           children:[
             {
-              path:'/main',
-              name:'body',
-              component:bodyHtml
+              path:'/major',
+              name:'major',
+              component:major
             },{
-              path:'/location',
-              name:'subMenuLocation',
-              component:myLocation
+              path:'/current',
+              name:'current',
+              component:current
             }
         ]
       }
