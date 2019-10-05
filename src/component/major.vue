@@ -30,11 +30,14 @@ export default {
     search : function (event){
        var location = event.target.value;
        this.$store.commit('setLocation', {'location':location});
-       if(location)
-         this.callTodayInfo();
+ 
+         this.callTodayInfo(); //현재날씨
+         this.callForcastInfo(); //예보
+      
     },
     ...mapActions([
       'callTodayInfo'
+      ,'callForcastInfo'
     ])
   }
   

@@ -1,20 +1,16 @@
 <template>
-   <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
-     예측 그래프 들어올자리
-   </div>
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 </template>
 <script>
-import chart from '../assets/js/graph';
 
 export default {
   name: 'forcast'
-  ,data:function(){
-  }
-  ,created:function(){
-      // alert("created")
-     // chart.init();
-     // chart.render($('#container'));
-  }
+  ,data(){
+    return {}
+  },mounted(){  
+        this.$store.dispatch('updateChart'); //차트 설정
+        this.$store.dispatch('callForcastInfo');  //예보 부르기
+    }
   
 }
 </script>

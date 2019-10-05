@@ -8,8 +8,15 @@
 import today from './today';
 import forcast from './forcast';
 
+var  Highcharts;
+
 export default {
     name:'info',
-    components:{today,forcast} 
+    components:{today,forcast}
+    ,method:{
+        update:function(){
+           
+        }
+    }
 }
 </script>

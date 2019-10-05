@@ -9,11 +9,7 @@
         </div>
       </div>
 <div id="map" style="width:500px;height:400px;"></div>
-
-<info :weather-info="post" :seen="seen"></info>
-
 </div>
-
 </template>
 <script>
 import info from './info';
@@ -30,19 +26,17 @@ export default {
   }
   ,methods:{
     current:function(){
-      map.current( this.callWeather );
-     ;
+      map.current( this.callbackFunc ); //callback
       event.preventDefault();
-    },
-    callWeather:function(pos){
-      var url= 'https://api.openweathermap.org/data/2.5/weather?lat='+ pos.lat +'&lon='+ pos.lon+'&appid=a9a915167d70372959600a838dcc192e';
 
-      this.$http.get(url)
-        .then((result)=>{
-          this.post = result.data;
-          this.seen = true;
-        })
+    }, callbackFunc : function( data ){
+      this.$store.commit("setLatLon", data ); //위도 경도 추가
+      
+      this.$store.dispatch('callTodayInfo'); //현재 날씨 
+      this.$store.dispatch('callForcastInfo'); //예보
+      
     }
+    
   },
   components:{info}
 }

@@ -5,10 +5,8 @@ let chart =  {
     init : function(){
         Highcharts = require('highcharts');
         require('highcharts/modules/exporting')(Highcharts);
-        
     },
     render : function(el){
-      //  alert("render")
         let instance =  new Highcharts.Chart({
             chart: {
                 renderTo: 'container',
@@ -62,6 +60,7 @@ let chart =  {
                 }]
             }]
          });
+         console.log(instance)
     }
 }
 //

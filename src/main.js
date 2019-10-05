@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
-new Vue({
+const vue = new Vue({
   el: '#app',
   router,
   store,
