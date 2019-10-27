@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './template/Main'
+import subMain from './template/subMain'
+
 
 import current from './component/current' 
 import major from './component/major'
+
 
 Vue.use(Router)
  
@@ -15,6 +18,11 @@ Vue.use(Router)
           name:'main',
           component:Main,
           children:[
+            {
+              path:'/',
+              name:'subMain',
+              component:subMain
+            },
             {
               path:'/major',
               name:'major',
