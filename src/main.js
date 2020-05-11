@@ -4,10 +4,8 @@ import store from './store'
 import App from './App.vue'
 import 'expose-loader?$!expose-loader?jQuery!jquery'
 import 'vue-daum-map'
-import 'bootstrap'
 import 'highcharts'
-import 'bootstrap/dist/css/bootstrap.min.css'
-
+import './assets/css/app.css';
 
 
 const vue = new Vue({

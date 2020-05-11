@@ -2,7 +2,7 @@
  <div class="container">
      <div class="page-header" id="banner">
         <div class="row">
-          <div class="col-lg-8 col-md-7 col-sm-6">
+          <div class="col-lg-8 col-md-7 col-sm-8">
             <h1>주요도시 </h1>
             <p class="lead">지역을 선택해주세요</p>
           </div>

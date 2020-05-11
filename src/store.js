@@ -57,8 +57,6 @@ export default new Vuex.Store({
         },callForcastInfo : function({commit, state}){
             var url='';
             if(state.location && state.location!=''){
-               //주요도시 +state.location+
-               console.log(state.location)
                url='https://api.openweathermap.org/data/2.5/forecast?q='+state.location+'&appid=a9a915167d70372959600a838dcc192e'
             }else if(state.pos && state.pos!={}){
                //현재위치

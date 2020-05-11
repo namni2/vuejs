@@ -1,12 +1,10 @@
 <template>
-  <div>
+  <div class="container">
     <headerHtml/>
-    <div> 
+    <div class="main"> 
       <router-view/>
     </div>
-    <div>
-      <info></info>
-    </div>
+    <div class="footer"></div>
   </div>
 </template>
 
@@ -17,7 +15,7 @@ import info from '../component/info'
 export default {
   name: 'main',
   components:{ 
-      headerHtml,info
+      headerHtml
   }
 }
 </script>
