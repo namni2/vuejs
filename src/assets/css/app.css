@@ -19,7 +19,7 @@
     height: 100%;
   }
   
-  .container {
+  .appContainer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -27,7 +27,7 @@
     flex-direction: column;
   }
   
-  .container .header {
+  .appContainer .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +38,7 @@
     padding-bottom: 5px;
   }
   
-  .container .header .headLeft {
+  .appContainer .header .headLeft {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -48,7 +48,7 @@
     margin-top: 10px;
   }
   
-  .container .header .headRight {
+  .appContainer .header .headRight {
     font-size: 1.2em;
     font-weight: 800;
     margin-top: 10px;
@@ -56,46 +56,56 @@
     color: white;
   }
   
-  .container .section {
+  .appContainer .section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 16px 32px;
-    grid-gap: 1rem;
+    grid-gap: 4rem;
     grid-auto-rows: 150px;
   }
   
-  .container .section .item {
+  .appContainer .section .item {
     background-color: #dcdcdc;
     box-sizing: border-box;
     border-radius: 16px;
     width: 100%;
+    height: fit-content;
   }
-  .container .section .item .card {
+  .appContainer .section .item .card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 15px 10px 15px 10px;
   }
-  .container .section .item .itemLeft {
+  .appContainer .section .item .card .itemLeft {
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left:20px;
+  }
+  
+  .appContainer .section .item .card .itemLeft {
     display: flex;
     flex-basis: 70%;
     flex-direction: column;
     justify-content: space-between;
   }
-  
-  .container .section .item .itemRight {
+
+  .appContainer .section .item .itemRight {
     display: flex;
+    padding-right:20px;
   }
   
-  .container .section .item .itemLeft .location {
+  .appContainer .section .item .itemLeft .location {
     font-size: 1.2em;
     font-weight: 600;
   }
-  .container .section .item .itemLeft .country {
+  .appContainer .section .item .itemLeft .country {
     font-size: 0.8em;
   }
   
-  .container .section .item .itemRight .temperature {
+  .appContainer .section .item .itemRight .temperature {
     font-size: 2em;
     font-weight: 800;
   }

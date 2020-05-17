@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './template/Main'
-import subMain from './template/subMain'
+import subMain from './component/subMain'
 
 
 import current from './component/current' 
