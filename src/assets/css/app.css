@@ -8,7 +8,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #8dc5f3;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -27,43 +26,29 @@
     flex-direction: column;
   }
   
-  .appContainer .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  
-  .appContainer .header .headLeft {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 800;
-    margin-top: 10px;
-  }
-  
-  .appContainer .header .headRight {
-    font-size: 1.2em;
-    font-weight: 800;
-    margin-top: 10px;
-    margin-right: 10px;
-    color: white;
-  }
-  
   .appContainer .section {
     display: grid;
+    height:80%;
     grid-template-columns: repeat(3, 1fr);
     padding: 16px 32px;
     grid-gap: 4rem;
     grid-auto-rows: 150px;
   }
   
+  .appContainer .section a {
+    text-decoration: none !important;
+    color:black
+  }
+  .appContainer .section a:link {
+    text-decoration: none !important;
+  }
+  .appContainer .section a:visited {
+    text-decoration: none !important;
+  }
+  .appContainer .section a:hover {
+    text-decoration: none !important;
+  }
+
   .appContainer .section .item {
     background-color: #dcdcdc;
     box-sizing: border-box;
@@ -85,12 +70,14 @@
     padding-left:20px;
   }
   
-  .appContainer .section .item .card .itemLeft {
-    display: flex;
-    flex-basis: 70%;
-    flex-direction: column;
-    justify-content: space-between;
+  .appContainer .section .item .card .itemLeft .icon {
+    width: 100px;
   }
+
+  .appContainer .section .item .card .itemLeft .icon img{
+    width: 100%;
+  }
+
 
   .appContainer .section .item .itemRight {
     display: flex;

@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from './template/Main'
+import Main from './component/Main'
 import subMain from './component/subMain'
 
-
+import forcast from './component/forcast'
 import current from './component/current' 
 import major from './component/major'
-
 
 Vue.use(Router)
  
@@ -31,6 +30,10 @@ Vue.use(Router)
               path:'/current',
               name:'current',
               component:current
+            },{
+              path:'/forcast',
+              name:'forcast',
+              component:forcast
             }
         ]
       }

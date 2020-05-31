@@ -1,79 +1,36 @@
-
 <script>
- 
-import WeatherIcon from '../template/icon.vue';
+
+import '../assets/css/app.css';
+import headerHtml from '../template/header.vue'
+import mainItem from '../template/mainItem.vue'
+import { mapState,mapActions } from 'vuex';
   export default {
     name: 'subMain'
     ,data:function(){
-      return{
-        sendIcon:'mostlysunny'
-      }
+      return { list : $store.state.mainListByMajor }
+    }
+    ,computed:{
+      ...mapState({
+        list : 'mainListByMajor'
+      })
+    }
+    ,created(){
+       this.$store.dispatch('callMainCities'); 
     }
     ,components:{
-      WeatherIcon
+       headerHtml,mainItem
     }
   }
 </script>
 
-<template>
-  <div class="section whatever">
-            <a class="item">
-              <div class="card">
-                <div class="itemLeft">
-                  <div class="icon">
-                     <WeatherIcon v-bind:icon="sendIcon"/>
-                  </div>
-                  <div class="location">서울</div>
-                  <div class="country">대한민국</div>
-                </div>
-                <div class="itemRight">
-                  <p class="temperature">20˚</p>
-                </div>
-              </div>
-            </a>
-            <a class="item">
-              <div class="card">
-                <div class="itemLeft">
-                  <div class="icon">
-                    <WeatherIcon/>
-                  </div>
-                  <div class="location">서울</div>
-                  <div class="country">대한민국</div>
-                </div>
-                <div class="itemRight">
-                  <p class="temperature">20˚</p>
-                </div>
-              </div>
-            </a>
-
-            <a class="item">
-              <div class="card">
-                <div class="itemLeft">
-                  <div class="icon">
-                    <WeatherIcon/>
-                  </div>
-                  <div class="location">서울</div>
-                  <div class="country">대한민국</div>
-                </div>
-                <div class="itemRight">
-                  <p class="temperature">20˚</p>
-                </div>
-              </div>
-            </a>
-
-            <a class="item">
-              <div class="card">
-                <div class="itemLeft">
-                  <div class="icon">
-                   <WeatherIcon/>
-                  </div>
-                  <div class="location">서울</div>
-                  <div class="country">대한민국</div>
-                </div>
-                <div class="itemRight">
-                  <p class="temperature">20˚</p>
-                </div>
-              </div>
-            </a>
-          </div>
+<template> 
+<div>
+  <headerHtml/>
+  <div class="section whatever"> 
+    <a v-for="(item, index) in list" v-bind:key="index" 
+        class="item" v-bind:href="'/forcast?id='+item.id+'&lat='+item.lat+'&lon='+item.lon" >    
+      <mainItem v-bind:item="item"/>  
+    </a>
+  </div>
+</div>
 </template>

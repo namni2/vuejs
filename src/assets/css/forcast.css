@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+  }
+  body,
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  #app {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .appContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  
+  .appContainer .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* height: 70%; */
+  }
+  
+  .appContainer .main .detail {
+    margin-left: 5%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .appContainer .main .detail ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+  
+  .appContainer .main .detail .item {
+    background-color: #dcdcdc;
+    /* width: 500px; */
+    height: 250px;
+    margin-bottom: 35px;
+    border-radius: 16px 16px 16px 16px;
+  }
+  
+  .appContainer .main .detail .item .itemTop {
+    height: 60%;
+    /* padding: 5px; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .stripeBlue {
+    box-shadow: rgb(177, 175, 175) 0px 5px 0.2px;
+  }
+  .stripePuple {
+    box-shadow: rgb(102, 51, 219) 0px 5px 0.2px;
+  }
+  
+  .appContainer .main .detail .item .itemTop .icon {
+    width: 70%;
+    text-align: right;
+    /* padding-top: 10px; */
+  }
+
+
+  .appContainer .main .detail .item .itemTop .icon img{
+    width: 50%;
+  }
+
+  
+  .appContainer .main .detail .item .itemTop .date {
+    width: 40%;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  
+  .appContainer .main .detail .item .itemTop .time {
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: -10px;
+  }
+  
+  .appContainer .main .detail .item .itemBottom {
+    height: 40%;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 0px 0px 16px 16px;
+  }
+  
+  .appContainer .main .detail .item .itemBottom .info {
+    flex-basis: auto;
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .appContainer .main .detail .item .itemBottom .temperature {
+    font-size: 3em;
+    font-weight: 800;
+  }
+  
+  
+
+  .appContainer .main .detail .item .itemBottom .humidity {
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+  
+  .appContainer .main .detail .item .itemBottom .humidity p {
+    margin: -5px 0px -50px 0px;
+  }
+  
+  .appContainer .main .detail .item .itemBottom .icon img {
+    height: 50px;
+    /* margin-right: -100px; */
+  }
+
+  .appContainer .main .detail .item .itemBottom .gap {
+    margin-left: -50px;
+  }
+  
+  .appContainer .chart {
+    border: blue solid 2px;
+    margin-right: 4%;
+    margin-top: 1%;
+    width: 53%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  
