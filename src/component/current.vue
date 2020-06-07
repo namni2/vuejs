@@ -34,7 +34,6 @@ export default {
       
       this.$store.dispatch('callTodayInfo'); //현재 날씨 
       this.$store.dispatch('callForcastInfo'); //예보
-      
     }
     
   },

@@ -23,14 +23,6 @@ Vue.use(Router)
               component:subMain
             },
             {
-              path:'/major',
-              name:'major',
-              component:major
-            },{
-              path:'/current',
-              name:'current',
-              component:current
-            },{
               path:'/forcast',
               name:'forcast',
               component:forcast

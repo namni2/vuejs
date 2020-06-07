@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["env", { "modules": false }],
+    ["env", { "modules": false ,"targets":{"chrome": 55}}], //chrome55부터 async/await 사용가능
     "stage-3"
   ]
 }

@@ -10,16 +10,37 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
+
+  .appContainer  a {
+    text-decoration: none !important;
+  }
+  .appContainer  a:link {
+    text-decoration: none !important;
+  }
+  .appContainer  a:visited {
+    text-decoration: none !important;
+  }
+  .appContainer  a:hover {
+    text-decoration: none !important;
+  }
   
-  .appContainer .header .headLeft {
+  .appContainer .header .headLeft a {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 800;
     margin-top: 10px;
+    color: white;
   }
+
+  .appContainer .header .headLeft .current {
+    margin-left: 5px;
+    color: white;
+  }
+
   
   .appContainer .header .headRight {
     font-size: 1.2em;

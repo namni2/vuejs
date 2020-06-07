@@ -6,14 +6,12 @@ import mainItem from '../template/mainItem.vue'
 import { mapState,mapActions } from 'vuex';
   export default {
     name: 'subMain'
-    ,data:function(){
-      return { list : $store.state.mainListByMajor }
-    }
-    ,computed:{
-      ...mapState({
-        list : 'mainListByMajor'
-      })
-    }
+    
+    ,computed: { //computed에 return되는 값이 종속적이면 리렌더링, 즉 staet값이 변경될 시 리렌더링
+      list(){
+        return this.$store.state.mainListByMajor
+      }
+    } 
     ,created(){
        this.$store.dispatch('callMainCities'); 
     }

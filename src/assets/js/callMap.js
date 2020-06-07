@@ -16,7 +16,7 @@ let callMap = {
         $.getScript('//dapi.kakao.com/v2/maps/sdk.js?appkey=9ced506ecc4ce66b5b7921c530959da9&libraries=services,drawing&autoload=false').done(function(data){
             let daumMakers = window.daum.maps;
             daumMakers.load(function(){
-                callMap.draw();
+                //callMap.draw();
             });
         });
     }, 
@@ -25,7 +25,7 @@ let callMap = {
             navigator.geolocation.getCurrentPosition(function(position) {
               var lat = position.coords.latitude, // 위도
                 lon = position.coords.longitude; // 경도
-
+               
                 var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
                 message = '<div style="padding:3px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
                     // 마커와 인포윈도우를 표시합니다
@@ -57,7 +57,25 @@ let callMap = {
         // 인포윈도우를 마커위에 표시합니다 
         infowindow.open(map, marker);
         map.setCenter(location);  
-     
+    }
+    ,currentByHeader : function(callback) { //2020.06 리뉴얼 위도, 경도 호출
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
+
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var lat = position.coords.latitude, // 위도
+                lon = position.coords.longitude; // 경도
+                
+                 geocoder.coord2Address(lon, lat,
+                    function(result, status){
+                    if(status && status.indexOf('OK')>-1){
+                        if(callback)
+                        callback( {"lat":lat,"lon":lon,"addressInfo":result});
+                    }
+                });
+            },function(failText){console.log(failText)});   
+        }
     }
 }
 

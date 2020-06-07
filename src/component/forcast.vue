@@ -1,7 +1,6 @@
 <template>
-  <!-- <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div> -->
   <div>
-    <headerHtml />  
+    <headerHtml v-bind:current="city"/>  
     <div class="main">
       <div class="detail">
         <ul>
@@ -40,7 +39,7 @@
         </ul>
       </div>
       <div class="chart">
-        차ㅌ영역
+        <div id="container" ></div>
       </div>
     </div>
   </div>    
@@ -49,13 +48,14 @@
 
 import '../assets/css/forcast.css'
 import headerHtml from '../template/header.vue'
+import chart from '../assets/js/graph';
 
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'forcast'
   ,data(){
-    return {}
+    return { city: this.$route.query.id }
   }
   ,computed:{
     ...mapState({
@@ -64,9 +64,12 @@ export default {
   }
   ,created(){  
     const params = this.$route.query;
-    this.$store.dispatch('callForcastByCity',params);
+    this.$store.dispatch('callForcastByCity',params).then(()=>{
+      chart.init(); 
+      chart.render(this.$store.state.cityForcastList );
+    });
   },components:{
-       headerHtml
+    headerHtml
   }
   
 }
