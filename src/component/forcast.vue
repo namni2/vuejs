@@ -66,7 +66,7 @@ export default {
     const params = this.$route.query;
     this.$store.dispatch('callForcastByCity',params).then(()=>{
       chart.init(); 
-      chart.render(this.$store.state.cityForcastList );
+      chart.render( this.$store.state.cityForcastList );
     });
   },components:{
     headerHtml

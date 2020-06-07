@@ -16,6 +16,9 @@
             d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
           ></path>
         </svg>
+        <div class="current">
+          현재위치
+        </div>
       </a>
 
     <a href="/" v-if="current!=null && currentDate!=''">
@@ -32,7 +35,7 @@
             <path  d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"></path>
             </svg>
             <div class="current">
-               {{currentData}}
+               {{currentData()}}
             </div>
             </a>
     </div>
@@ -54,11 +57,16 @@ export default {
   ,props:['current']
   ,data:function(){
     return {
-      currentDate:function(){
+      currentDate:function(){ //현재시간
         const date = new Date();
         return date.getFullYear()+"."+('0'+(date.getMonth()+1)).slice(-2)+"."+('0'+(date.getDate())).slice(-2)
       },
-      currentData: this.current!=null? mapping.cityNameMap[this.current] : ''
+      currentData:function(){ //현재정보
+        if(this.current==null || this.current=='') return '';
+        if(!mapping.cityNameMap[this.current]) return this.current;
+
+        return mapping.cityNameMap[this.current];
+      }
     }
   }
   ,mounted(){
