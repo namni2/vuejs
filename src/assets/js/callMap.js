@@ -14,6 +14,7 @@ let callMap = {
     },
     init : function(){
         $.getScript('//dapi.kakao.com/v2/maps/sdk.js?appkey=9ced506ecc4ce66b5b7921c530959da9&libraries=services,drawing&autoload=false').done(function(data){
+            
             let daumMakers = window.daum.maps;
             daumMakers.load(function(){
                 //callMap.draw();

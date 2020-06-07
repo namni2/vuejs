@@ -54,7 +54,6 @@ export default new Vuex.Store({
         
         $http.get(url)
         .then((result)=>{
-          console.log('result',result)
             if(result && result.status == "200"){
             const address = payload.addressInfo.length>0 ? 
                  payload.addressInfo[0].address.address_name: result.data.name;
@@ -69,7 +68,6 @@ export default new Vuex.Store({
             }
             //console.log('erere',[map].concat(this.state.mainListByMajor))
             commit('setMainListByMajor',[map].concat(this.state.mainListByMajor));
-            console.log(this.state.mainListByMajor)
             
           }
         });

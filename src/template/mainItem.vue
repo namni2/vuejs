@@ -1,17 +1,8 @@
 
 <script>
-import WeatherIcon from '../template/icon.vue';
 export default {
     name: 'mainItem'
-    ,props:['item']
-    ,data:function(){
-        return{
-           
-        }
-    }
-    ,components:{
-      WeatherIcon
-    }
+    ,props:['item']  
 }
 </script>
 <template>

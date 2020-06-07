@@ -30,5 +30,6 @@ import { mapState,mapActions } from 'vuex';
       <mainItem v-bind:item="item"/>  
     </a>
   </div>
+  
 </div>
 </template>
