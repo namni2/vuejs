@@ -27332,7 +27332,7 @@ exports.default = new _vueRouter2.default({
       name: 'subMain',
       component: _subMain2.default
     }, {
-      path: '/vuejs/forcast',
+      path: '/forcast',
       name: 'forcast',
       component: _forcast2.default
     }]
