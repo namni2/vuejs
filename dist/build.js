@@ -27324,7 +27324,7 @@ _vue2.default.use(_vueRouter2.default);
 exports.default = new _vueRouter2.default({
   mode: 'history',
   routes: [{
-    path: '/vuejs',
+    path: '/',
     name: 'main',
     component: _Main2.default,
     children: [{
