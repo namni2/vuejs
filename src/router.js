@@ -10,7 +10,7 @@ Vue.use(Router)
     mode:'history',
     routes: [
       {
-          path:'/',
+          path:'/vuejs',
           name:'main',
           component:Main,
           children:[
