@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "/vuejs/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 28);
@@ -27332,7 +27332,7 @@ exports.default = new _vueRouter2.default({
       name: 'subMain',
       component: _subMain2.default
     }, {
-      path: '/forcast',
+      path: '/vuejs/forcast',
       name: 'forcast',
       component: _forcast2.default
     }]
