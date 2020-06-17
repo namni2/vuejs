@@ -4,8 +4,10 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '',
+    path: path.resolve(__dirname, './docs'),
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/vuejs/'
+    : '/',
     filename: 'build.js'
   },
   module: {
