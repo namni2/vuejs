@@ -26,7 +26,7 @@ import { mapState,mapActions } from 'vuex';
   <headerHtml/>
   <div class="section whatever"> 
     <a v-for="(item, index) in list" v-bind:key="index" 
-        class="item" v-bind:href="'/vuejs/forcast?id='+item.id+'&lat='+item.lat+'&lon='+item.lon" >    
+        class="item" v-bind:href="'/forcast?id='+item.id+'&lat='+item.lat+'&lon='+item.lon" >    
       <mainItem v-bind:item="item"/>  
     </a>
   </div>

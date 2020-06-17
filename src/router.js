@@ -10,17 +10,17 @@ Vue.use(Router)
     mode:'history',
     routes: [
       {
-          path:'/vuejs',
+          path:'/',
           name:'main',
           component:Main,
           children:[
             {
-              path:'/vuejs',
+              path:'/',
               name:'subMain',
               component:subMain
             },
             {
-              path:'/vuejs/forcast',
+              path:'/forcast',
               name:'forcast',
               component:forcast
             }
