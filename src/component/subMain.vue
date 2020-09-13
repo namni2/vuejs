@@ -27,8 +27,7 @@ import { mapState,mapActions } from 'vuex';
   <headerHtml/>
   <div class="section whatever"> 
     <router-link v-for="(item, index) in list" v-bind:key="index" 
-        class="item" to=
-"{name:'/forcase', params:{ id : {{ item.id }}, lat : {{item.lat}}, lon:{{item.lon}} }">    
+        class="item" :to="`./forcast?id=${ item.id }&lat=${item.lat}&lon=${item.lon}`" >
       <mainItem v-bind:item="item"/>  
     </router-link>
   </div>
