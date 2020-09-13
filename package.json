@@ -7,10 +7,10 @@
   "homepage": "https://namni2.github.io/vuejs/",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "deploy": "yarn build && gh-pages -d build",
-    "serve": "webpack-dev-server --open"
+    "serve": "yarn dev && webpack-dev-server --open --hot"
   },
   "dependencies": {
     "axios": "^0.19.0",
