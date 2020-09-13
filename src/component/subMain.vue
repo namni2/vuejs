@@ -26,10 +26,11 @@ import { mapState,mapActions } from 'vuex';
 <div>
   <headerHtml/>
   <div class="section whatever"> 
-    <a v-for="(item, index) in list" v-bind:key="index" 
-        class="item" v-bind:href="'/forcast?id='+item.id+'&lat='+item.lat+'&lon='+item.lon" >    
+    <router-link v-for="(item, index) in list" v-bind:key="index" 
+        class="item" to=
+"{name:'/forcase', params:{ id : {{ item.id }}, lat : {{item.lat}}, lon:{{item.lon}} }">    
       <mainItem v-bind:item="item"/>  
-    </a>
+    </router-link>
   </div>
 </div>
 </template>
