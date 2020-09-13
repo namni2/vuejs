@@ -21,7 +21,7 @@
         </div>
       </a>
 
-    <a href="/vuejs" v-if="current!=null && currentDate!=''">
+    <a href="/" v-if="current!=null && currentDate!=''">
         <svg
             stroke="currentColor"
             fill="currentColor"
