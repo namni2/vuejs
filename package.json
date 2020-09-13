@@ -5,6 +5,7 @@
   "author": "LeeNamHeun <namheun@naver.com>",
   "license": "MIT",
   "homepage": "https://namni2.github.io/vuejs/",
+  "basename": "/vuejs",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack",
