@@ -21,7 +21,7 @@
         </div>
       </a>
 
-    <a href="/" v-if="current!=null && currentDate!=''">
+    <a href="javascript:history.back(-1);" v-if="current!=null && currentDate!=''">
         <svg
             stroke="currentColor"
             fill="currentColor"
