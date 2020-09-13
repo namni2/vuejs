@@ -9,7 +9,7 @@ Vue.use(Router)
     mode:'history',
     routes: [
       {
-        path:'/vuejs',
+        path:'/',
         name:'subMain',
         component:subMain
       }
