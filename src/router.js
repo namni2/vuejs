@@ -13,7 +13,7 @@ Vue.use(Router)
         name:'subMain',
         component:subMain
       }
-     , {
+      , {
         path:'/forcast',
         name:'forcast',
         component:forcast
