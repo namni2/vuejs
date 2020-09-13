@@ -27300,11 +27300,11 @@ _vue2.default.use(_vueRouter2.default);
 exports.default = new _vueRouter2.default({
   mode: 'history',
   routes: [{
-    path: '/',
+    path: '/vuejs',
     name: 'subMain',
     component: _subMain2.default
   }, {
-    path: '/forcast',
+    path: '/vuejs/forcast',
     name: 'forcast',
     component: _forcast2.default
   }]
