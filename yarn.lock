@@ -2829,9 +2829,9 @@ home-or-tmp@^2.0.0:
     os-tmpdir "^1.0.1"
 
 hosted-git-info@^2.1.4:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
-  integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -6253,13 +6253,6 @@ vue-loader@^13.0.5:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
 
-vue-naver-maps@^0.11.6:
-  version "0.11.11"
-  resolved "https://registry.yarnpkg.com/vue-naver-maps/-/vue-naver-maps-0.11.11.tgz#b426b5d71179e564c631047a7f53d442e080e8b7"
-  integrity sha512-pHIqb+nO1F6fwTLcjDRvUg/g2n5iQ8S/x6RtbvmBff56Bux2VTZnH6yDIXGg0xzh5393bmYe9JEjW8gx/Pn1HA==
-  dependencies:
-    vue "^2.6.11"
-
 vue-router@^3.0.7:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
@@ -6286,12 +6279,7 @@ vue-template-es2015-compiler@^1.6.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue-weathericons@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/vue-weathericons/-/vue-weathericons-0.0.3.tgz#f286721e80f5cb12e277da0b491a8122d946443b"
-  integrity sha512-5tb2EJjHK+ALA4bBHayayaZr7gQWiahXhrbVu8O4RGWKmwPIUb6Ntmum82BDr8e6xrpYFgydI/g4PCZE0oPGXQ==
-
-vue@^2.5.11, vue@^2.6.11:
+vue@^2.5.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
@@ -6316,16 +6304,6 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
-
-weather-icons@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/weather-icons/-/weather-icons-1.3.2.tgz#8ac000f92858427252b80cc57a06bfa827900ac0"
-  integrity sha1-isAA+ShYQnJSuAzFega/qCeQCsA=
-
-weathericons@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/weathericons/-/weathericons-2.1.0.tgz#7453a1a35e200245e389fb5077d527eff30b73b4"
-  integrity sha1-dFOho14gAkXjiftQd9Un7/MLc7Q=
 
 webpack-dev-middleware@1.12.2:
   version "1.12.2"
